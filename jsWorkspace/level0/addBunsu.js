@@ -8,26 +8,18 @@
 0 <denum1, num1, denum2, num2 < 1,000
 
 */
-
 function solution(denum1, num1, denum2, num2) {
 	var answer = [];
 
-	let lcm = 1;
+	let first = num1 * denum2 + num2 * denum1;
+	let second = num1 * num2;
 
-	while (1) {
-		if (lcm % num1 === 0 && lcm % num2 === 0) {
-			break;
-		}
-		lcm++;
-	}
-	//최소 공배수를 구한 다음에 분자의 합을 구하면 답이 나온다고 생각했는데.. 왜 제출했는데 실패가 뜰까?
-	const denum = denum1 * (lcm / num1) + denum2 * (lcm / num2);
-	answer = [denum, lcm];
+	let gcd = (a, b) => (a % b === 0 ? b : gcd(b, a % b));
+	let min = gcd(first, second);
 
-	console.log(answer);
+	answer[0] = first / min;
+	answer[1] = second / min;
 	return answer;
 }
 
 solution(9, 2, 1, 3);
-
-//실패!.. 내일 다시 풀어보자!
