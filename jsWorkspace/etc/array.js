@@ -30,3 +30,4 @@ console.log(funcSum(4, 14, arr));
 console.log("next");
 funcSum(5, 7, [1, 2, 5, 1, 0]);
 console.log("outside count:", count);
+//음... 다 제대로 찾은게 맞나?? 이것을 한번 더 확인하고난 다음에 메모이제이션을 추가하도록 하자.
