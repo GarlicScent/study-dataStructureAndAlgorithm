@@ -1,3 +1,4 @@
+//개구리 문제를 동적 계획법으로 풀기.
 // N=7, h=(2,9,4,5,1,6,10)
 #include <iostream>
 #include <vector>
