@@ -1,3 +1,4 @@
+//개구리 문제를 js로 풀기.
 let h = [2, 9, 4, 5, 1, 6, 10];
 const INF = Infinity;
 let dp = h.map((x) => INF);
