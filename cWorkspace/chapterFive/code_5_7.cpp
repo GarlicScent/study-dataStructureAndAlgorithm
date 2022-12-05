@@ -14,6 +14,7 @@ void chmax(T &a, T b)
 
 int main()
 {
+  //입력
   int N;
   long long W;
   cin >> N >> W;
@@ -23,6 +24,7 @@ int main()
 
   // DP 테이블 정의
   vector<vector<long long>> dp(N + 1, vector<long long>(W + 1, 0));
+  //아무것도 고르지 않았을 때. 그리고 무게를 0이라고 했을 때.
 
   // DP 반복
   for (int i = 0; i < N; ++i)
