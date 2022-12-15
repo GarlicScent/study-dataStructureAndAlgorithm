@@ -1,4 +1,4 @@
-//배열에서 값을 탐색하는 이진 탐색법
+// 배열에서 값을 탐색하는 이진 탐색법
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -10,10 +10,10 @@ const vector<int> a = {3, 5, 8, 10, 14, 17, 21, 39};
 
 int binary_search(int key)
 {
-  int left = 0, right = (int)a.size() - 1; //배열 a의 왼쪽과 오른쪽
+  int left = 0, right = (int)a.size() - 1; // 배열 a의 왼쪽과 오른쪽
   while (right >= left)
   {
-    int mid = left + (right - left) / 2; //구간의 중심.
+    int mid = left + (right - left) / 2; // 구간의 중심.
     if (a[mid] == key)
       return mid;
     else if (a[mid] > key)
