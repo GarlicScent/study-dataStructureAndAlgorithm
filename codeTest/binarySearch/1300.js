@@ -9,23 +9,3 @@ B를 오름차순 정렬했을 때, B[k]를 구해보자. 배열 A와 B의 인�
 
 https://www.acmicpc.net/problem/1300
 */
-
-let N = 3;
-let k = 3;
-
-const A = Array.from(Array(3), () => Array(3).fill(null));
-for (let i = 0; i < N; i++) {
-	for (let j = 0; j < N; j++) {
-		A[i][j] = i * j;
-	}
-}
-
-console.log(A);
-let B = [];
-
-for (let i = 1; i < N; i++) {
-	for (let j = 1; j < N; j++) {
-		B.push(A[i][j]);
-	}
-}
-console.log(B[k]);
