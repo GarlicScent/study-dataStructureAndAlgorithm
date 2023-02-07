@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer="YES", max;
+                let total = a + b + c;
+                max = a > b ? a : b;
+                max = max < c ? c : max;
+                //짧은 막대 두 길이의 합이 최소한 긴 막대보다 커야된다.
+                if(max > total-max){
+                  answer="NO";
+                }
+                return answer;
+            }
+
+            console.log(solution(13,33,17));
+        </script>
+    </body>
+</html>
+<!-- 
+▣ 입력예제 1 6 7 11
+▣ 출력예제 1 YES
+▣ 입력예제 1 13 33 17
+▣ 출력예제 1 NO
+-->
